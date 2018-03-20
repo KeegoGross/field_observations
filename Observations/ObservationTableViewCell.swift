@@ -1,6 +1,5 @@
-
 //
-//  DisplayCell.swift
+//  ObservationTableViewCell.swift
 //  Observations
 //
 //  Created by John Lund-Molfese on 3/20/18.
@@ -9,7 +8,12 @@
 
 import UIKit
 
-class DisplayCell: UITableViewCell {    
+class ObservationTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var category: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +24,5 @@ class DisplayCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 
 }

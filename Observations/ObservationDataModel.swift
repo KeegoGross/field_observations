@@ -12,9 +12,12 @@ class Observation {
     var picture: UIImage?
     var description: String
 
-init(name: String, photo: UIImage?, description: String) {
-    self.name = name
-    self.picture = photo
-    self.description = description
-}
+    init?(name: String, photo: UIImage?, description: String) {
+        guard !name.isEmpty else {
+            return nil
+        }
+        self.name = name
+        self.picture = photo
+        self.description = description
+    }
 }
